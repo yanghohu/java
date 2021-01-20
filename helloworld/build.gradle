@@ -4,20 +4,21 @@ plugins {
 	id 'java'
 }
 
-group = 'com'
+group = 'hello'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '8'
 
 repositories {
 	mavenCentral()
+	mavenLocal()
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation "org.mybatis.spring.boot:mybatis-spring-boot-starter:1.1.1" //mybatis 추가
+	implementation "org.mybatis:mybatis-spring"
+	implementation "org.mybatis:mybatis"
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-}
-
-test {
-	useJUnitPlatform()
+	runtimeOnly 'com.oracle.database.jdbc:ojdbc8'  // oracle driver추가
 }

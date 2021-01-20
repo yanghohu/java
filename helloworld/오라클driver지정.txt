@@ -1,0 +1,16 @@
+https://hye0-log.tistory.com/24
+
+1.build.gradle 에 아래내용추가 dependenies
+	runtimeOnly 'com.oracle.database.jdbc:ojdbc8'  // oracle driver추가
+
+2.application.properties 수정
+DB접속정보를 application.properties 파일에 추가한다.
+
+#datasource (oracle)
+spring.datasource.driver-class-name=oracle.jdbc.driver.OracleDriver
+spring.datasource.url=jdbc:oracle:thin:@접속IP:PORT/SID
+spring.datasource.username=유저명
+spring.datasource.password=패스워드
+
+
+출처: https://hye0-log.tistory.com/24 [Hailey's Daily Logs_]
